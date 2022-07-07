@@ -1,1 +1,15 @@
+
+<button class="btn btn-primary new_recipe">New Recipe</button>
+<div class="all_recipe_groups">
+    <div class="single_recipe" *ngFor="let recipe of recipes">
+        <div class="recipe_cntnt">
+            <h3>{{recipe.name}}</h3>
+            <p>{{recipe.description}}</p>
+        </div>
+        <div class="recipe_img">
+            <img src="{{recipe.imagePath}}" alt="#">
+        </div>
+    </div>
+</div>
+
 <app-recipe-item></app-recipe-item>
