@@ -2,7 +2,11 @@
     <div class="col-md-12">
         <app-shopping-edit></app-shopping-edit>
     </div>
-    <div class="col-md-12">
-        <p>The list</p>
+    <div class="col-md-10">
+        <ul class="ingredients">
+            <li *ngFor="let ingredients of ingredients">
+                <a href="#">{{ingredients.name}} ({{ingredients.amount}})</a>
+            </li>
+        </ul>
     </div>
 

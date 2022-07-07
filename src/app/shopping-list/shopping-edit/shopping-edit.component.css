@@ -1,0 +1,5 @@
+.input-groups{display: flex;flex-wrap: wrap;align-items: center;justify-content: flex-start;}
+.input-groups .form-group:first-child {width: 20%;}
+.input-groups .form-group:last-child {width: 10%;margin-left: 15px;}
+.ingre_edit_form {margin-bottom: 25px;}
+.btn-grp .btn-danger,.btn-grp .btn-primary{margin-left: 15px;}

@@ -1,7 +1,8 @@
 
 <button class="btn btn-primary new_recipe">New Recipe</button>
 <div class="all_recipe_groups">
-    <div class="single_recipe" *ngFor="let recipe of recipes">
+   <a href="#" *ngFor="let recipe of recipes">
+    <div class="single_recipe">
         <div class="recipe_cntnt">
             <h3>{{recipe.name}}</h3>
             <p>{{recipe.description}}</p>
@@ -10,6 +11,7 @@
             <img src="{{recipe.imagePath}}" alt="#">
         </div>
     </div>
+   </a>    
 </div>
 
 <app-recipe-item></app-recipe-item>
