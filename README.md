@@ -29,4 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Planning the app
 ![image](https://user-images.githubusercontent.com/95848686/177274982-374b9d5e-8b1e-4b56-9150-719abddcf50d.png)
 
+## Development 1
+![image](https://user-images.githubusercontent.com/95848686/177733900-8c2bab1b-2ecd-42af-ba3c-dcb932c3c3e1.png)
+The first look at the UI of the front page, where on the top section we are having recipe list and recipe details aligned beside each other. On the bottom section we 
+are having a form that will edit the ingredients section down below. Please note : The form and the ingredients section comes under the shopping list section. 
+
 
