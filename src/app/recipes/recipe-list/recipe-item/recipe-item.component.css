@@ -1,0 +1,8 @@
+.new_recipe{margin-bottom: 15px;}
+.single_recipe{display: flex;align-items: center;justify-content: space-between;flex-wrap: wrap;
+    border: 1px solid gray;padding: 10px;border-radius: 6px;margin-bottom: 15px;}
+.recipe_cntnt{width: 85%;}
+.recipe_img{width: 15%;}
+.recipe_img img{width: 100%;max-width: 100%;}
+.all_recipe_groups a{text-decoration: none;color: #000;}
+a{text-decoration: none;}
