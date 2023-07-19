@@ -1,2 +1,4 @@
 .recipe_img{width: 300px;}
 .recipe_img img{max-width: 100%;width: 100%;}
+.recipe_ingre ul{padding: 0;margin: 0;}
+.recipe_ingre ul li{list-style: none;padding: 10px;border: 1px solid gray;border-radius: 6px;margin-bottom: 10px;}

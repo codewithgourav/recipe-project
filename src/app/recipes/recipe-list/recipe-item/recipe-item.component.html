@@ -1,4 +1,4 @@
-<div>
+<div style="cursor: pointer;" *ngFor="let recipe of recipes, let i = index"  [routerLink]="[i]" routerLinkActive="active">
     <div class="single_recipe">
         <div class="recipe_cntnt">
             <h3>{{recipe.name}}</h3>

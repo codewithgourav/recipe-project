@@ -1,21 +1,23 @@
 import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { UserService } from 'src/app/service/user.service';
-
+import { Ingredients } from 'src/app/shared/ingredients.model';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-recipe-list',
   templateUrl: './recipe-list.component.html',
   styleUrls: ['./recipe-list.component.css']
 })
 export class RecipeListComponent implements OnInit {
-  //@Output() myRecipe = new EventEmitter<{ name: string; description: string; imagePath: string; }>() 
+
+  activeIndex : any
   recipes : any
-  constructor(private userService : UserService) { }
+  constructor(private userService : UserService,private router : Router) { }
 
   ngOnInit(): void {
     this.recipes = this.userService.recipes
   }
 
-  getRecipe(recipe:{ name: string; description: string; imagePath: string; }){
-    this.userService.myRecipe.emit(recipe)
+  setActiveItem(i:any){
+    this.activeIndex = i
   }
 }

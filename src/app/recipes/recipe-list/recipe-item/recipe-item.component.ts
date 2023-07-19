@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
-import { Recipe } from '../../recipe.model';
-
+import { ActivatedRoute } from '@angular/router';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -8,13 +8,15 @@ import { Recipe } from '../../recipe.model';
   styleUrls: ['./recipe-item.component.css']
 })
 export class RecipeItemComponent implements OnInit {
-  @Input()
-  recipe!: { name: string; description: string; imagePath: string; };
+
+
+  recipes : any;
 
   
-  constructor() { }
+  constructor(private activatedRoute : ActivatedRoute,private userService : UserService) { }
 
   ngOnInit(): void {
+    this.recipes = this.userService.recipes
   }
 
   

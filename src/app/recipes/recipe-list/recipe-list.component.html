@@ -1,8 +1,9 @@
 
-<button class="btn btn-primary new_recipe">New Recipe</button>
+<button class="btn btn-primary new_recipe" [routerLink]="['/recipes/new']">New Recipe</button>
 <div class="all_recipe_groups">
-    <app-recipe-item *ngFor="let recipeEl of recipes" [recipe]="recipeEl"
-    (click)="getRecipe(recipeEl)"></app-recipe-item>   
+    <app-recipe-item>
+
+    </app-recipe-item>   
 </div>
 
 
