@@ -15,7 +15,7 @@ export class ShoppingEditComponent implements OnInit {
   }
 
   onAddItem(){
-    this.userService.ingredientAdded.emit({
+    this.userService.addIngredient({
       name : this.nameInput.nativeElement.value,
       amount:this.amountInput.nativeElement.value
     })
