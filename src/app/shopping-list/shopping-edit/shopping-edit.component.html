@@ -1,18 +1,18 @@
-<form class="ingre_edit_form">
+<form class="ingre_edit_form" [formGroup]="form" (ngSubmit)="onAddItem()">
     <div class="input-groups">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" #nameInput>
+            <input type="text" class="form-control" id="name" formControlName="name">
         </div>
         <div class="form-group">
             <label for="amount">Amount</label>
-            <input type="number" class="form-control" id="amount" #amountInput>
+            <input type="number" class="form-control" id="amount" formControlName="amount">
         </div>
     </div>
     <div class="btn-grp">
-        <button class="btn btn-success" type="submit" (click)="onAddItem()">Add</button>
-        <button class="btn btn-danger" type="button">Delete</button>
-        <button class="btn btn-primary" type="button">Clear</button>
+        <button class="btn btn-success" type="submit" [disabled]="!form.valid">{{editMode?'Edit':'Add'}}</button>
+        <button *ngIf="editMode" class="btn btn-danger" type="button" (click)="onDelete()">Delete</button>
+        <button class="btn btn-primary" type="button" (click)="onClear()">Clear</button>
     </div> 
 </form>
 <hr>

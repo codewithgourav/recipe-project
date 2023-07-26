@@ -34,9 +34,12 @@ export class UserService {
   ]
 
   ingredientAdded = new Subject<Ingredients>()
-
+  startedEditing = new Subject<any>() 
   addIngredient(ingredient:Ingredients){
     this.ingredientAdded.next(ingredient)
+  }
+  getIngredients(i:any){
+    return this.ingredients[i]
   }
   //ingredientAdded = new EventEmitter<{name : string,amount : number}>()
 
@@ -48,5 +51,14 @@ export class UserService {
 
   getRecipe(id:any){
     return this.recipes[id]
+  }
+
+  updateIngredient(index:any,formData:any){
+    this.ingredients[index].name = formData.name
+    this.ingredients[index].amount = formData.amount
+  }
+
+  deleteItem(index:any){
+    this.ingredients.splice(index,1)
   }
 }

@@ -4,8 +4,8 @@
     </div>
     <div class="col-md-10">
         <ul class="ingredients">
-            <li *ngFor="let ingredients of ingredients">
-                <a href="#">{{ingredients.name}} ({{ingredients.amount}})</a>
+            <li *ngFor="let ingredients of ingredients,let i = index">
+                <a (click)="onEditItem(i)">{{ingredients.name}} ({{ingredients.amount}})</a>
             </li>
         </ul>
     </div>
